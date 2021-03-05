@@ -1,5 +1,6 @@
-{​​​​​
-    "presets": [
-    "@babel/preset-env"
+{
+    // regarder la doc de babel pour les presets
+    "presets":[
+        "@babel/preset-env"
     ]
-}​​​​​
+}
