@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
     firstName: {
         type: String,
-    required: true,
+        required: true,
         lowercase: true,
     },
     password: {
@@ -13,17 +13,29 @@ const userSchema = new Schema({
         minlength: 6,
     },
     lastName: {
-        type: String
+        type: String,
+        required: true,
     },
     email: {
         type: String,
-        unique: true
+        trim: true,
+        unique: true,
+        lowercase: true
     },
     isAdmin: {
-        type: Boolean
+        type: Boolean,
+        default: false
     },
-    age: {
+    phone: {
         type: Number
+    },
+    address: {
+        type: String,
+        required: true,
+    },
+    resetLink: {
+        data: String,
+        default: ''
     }
 }, { timestamps: true });
  
